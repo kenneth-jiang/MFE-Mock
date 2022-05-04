@@ -1,11 +1,11 @@
 import React from "react";
-import CustomRouter from "./CustomRouter";
 import { Router, Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/material";
 
 import Banner from "./components/Banner";
 import Input from "./components/Input";
+import CustomRouter from "./CustomRouter";
 
 const StyledContainer = styled(Container)(() => ({
     borderLeft: "1px solid #febe10",
