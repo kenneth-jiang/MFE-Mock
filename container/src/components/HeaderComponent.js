@@ -1,4 +1,4 @@
-// import { mount } from 'header/HeaderComponent';
+// import { mount } from "header/HeaderComponent";
 // import React, { useState, useRef, useEffect, useContext } from "react";
 // import { useNavigate, UNSAFE_NavigationContext } from "react-router-dom";
 
@@ -24,7 +24,7 @@
 // };
 
 import React from "react";
-import { mount } from 'header/HeaderComponent';
+import { mount } from "header/HeaderComponent";
 import RemoteAppWrapper from "../hoc/RemoteAppWrapper";
 
 const HeaderComponent = () => {
