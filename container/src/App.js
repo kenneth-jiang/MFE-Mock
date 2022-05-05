@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderComponent from "./components/HeaderComponent";
 import InputComponent from "./components/InputComponent";
 import AboutComponent from "./components/AboutComponent";
-import { createBrowserHistory } from "history";
 import CustomRouter from "./CustomRouter";
 
 export default () => {
