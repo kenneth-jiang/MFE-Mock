@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - "container/**"
-workflow_dispatch:
 
 defaults:
   run:
