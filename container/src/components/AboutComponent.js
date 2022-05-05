@@ -1,4 +1,4 @@
-// import { mount } from 'about/AboutComponent';
+// import { mount } from "about/AboutComponent";
 // import React, { useRef, useEffect, useContext } from "react";
 // import { useNavigate, useLocation, UNSAFE_NavigationContext } from "react-router-dom";
 // import { createBrowserHistory } from "history";
@@ -30,7 +30,7 @@
 // };
 
 import React from "react";
-import { mount } from 'about/AboutComponent';
+import { mount } from "about/AboutComponent";
 import RemoteAppWrapper from "../hoc/RemoteAppWrapper";
 
 const AboutComponent = () => {
