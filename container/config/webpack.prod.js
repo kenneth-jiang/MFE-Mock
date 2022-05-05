@@ -14,9 +14,9 @@ const prodConfig = {
         new ModuleFederationPlugin({
             name: "container",
             remotes: {
-                header: "header@" + domain + "/header/remoteEntry.js", // nested folder inside domain
-                input: "input@" + domain + "/input/remoteEntry.js",
-                about: "about@" + domain + "/about/remoteEntry.js",
+                header: "header@" + domain + "/header/latest/remoteEntry.js", // nested folder inside domain
+                input: "input@" + domain + "/input/latest/remoteEntry.js",
+                about: "about@" + domain + "/about/latest/remoteEntry.js",
             },
             shared: packageJson.dependencies,
         })
