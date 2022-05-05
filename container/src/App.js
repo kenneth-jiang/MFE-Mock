@@ -7,8 +7,6 @@ import { createBrowserHistory } from "history";
 import CustomRouter from "./CustomRouter";
 
 export default () => {
-	const history = createBrowserHistory();
-
 	return (
 		<BrowserRouter>
 			<HeaderComponent />
