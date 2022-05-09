@@ -15,7 +15,7 @@ export default () => {
 					<Route path="/about" element={<AboutComponent />} />
 					<Route path="/990-finder" element={<InputComponent />} />
 					<Route path="/localization" element={<LocalizationComponent />} />
-					<Route path="/" element={<div>Hello World!</div>} />
+					<Route path="/" element={<div>Hello World! This page should be rendered when the Candid logo is clicked.</div>} />
 				</Routes>
 			</Suspense>
 		</BrowserRouter>
