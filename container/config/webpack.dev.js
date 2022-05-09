@@ -9,6 +9,7 @@ const devConfig = {
         port: 8080,
         historyApiFallback: {
             index: "index.html",
+            publicPath: "http://localhost:8080/"
         },
     },
     plugins: [
@@ -18,6 +19,7 @@ const devConfig = {
                 header: "header@http://localhost:8081/remoteEntry.js",
                 input: "input@http://localhost:8082/remoteEntry.js",
                 about: "about@http://localhost:8083/remoteEntry.js",
+                localization: "localization@http://localhost:3000/remoteEntry.js",
             },
             shared: packageJson.dependencies,
         }),

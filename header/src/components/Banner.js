@@ -66,6 +66,8 @@ const Banner = () => {
             return setSelectedTab(0);
         } else if (path === "/about") {
             return setSelectedTab(1);
+        } else if (path === "/localization") {
+            return setSelectedTab(2);
         };
         console.log(navigator.location.pathname)
     }, []);
@@ -78,6 +80,8 @@ const Banner = () => {
             return setSelectedTab(0);
         } else if (path === "/about") {
             return setSelectedTab(1);
+        } else if (path === "/localization") {
+            return setSelectedTab(2);
         };
         // return setSelectedTab(newValue);
     };
@@ -130,7 +134,7 @@ const Banner = () => {
                             }} 
                         />
                     </StyledGridItem>
-                    <StyledGridItem item xs={3}>
+                    <StyledGridItem item xs={6}>
                         <Box sx={{ borderColor: "divider" }}>
                             <Tabs
                                 value={selectedTab}
@@ -151,10 +155,17 @@ const Banner = () => {
                                         handleTabChange();    
                                     }} 
                                 />
+                                <Tab
+                                    label="Localization"
+                                    onClick={() => {
+                                        navigate({ pathname: "/localization" })
+                                        handleTabChange();    
+                                    }} 
+                                />
                             </Tabs>
                         </Box>
                     </StyledGridItem>
-                    <StyledGridItem item xs={6}>
+                    <StyledGridItem item xs={3}>
                         <RightAlignedStyledDiv>
                             {renderSearchButtonOrInput()}
                         </RightAlignedStyledDiv>
