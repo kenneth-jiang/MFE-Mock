@@ -18,7 +18,7 @@ const prodConfig = {
                 header: "header@" + domain + "/header/latest/remoteEntry.js", // nested folder inside domain
                 input: "input@" + domain + "/input/latest/remoteEntry.js",
                 about: "about@" + domain + "/about/latest/remoteEntry.js",
-                localization: "localization@" + localizationDomain + "/remoteEntry.js",
+                localization: "localization@" + localizationDomain + "/localization/latest/remoteEntry.js",
             },
             shared: packageJson.dependencies,
         })
