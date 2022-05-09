@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState, useContext } from "react";
+import { useNavigate, UNSAFE_NavigationContext } from 'react-router-dom';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Tabs from "@mui/material/Tabs";
@@ -56,9 +56,30 @@ const Banner = () => {
     const [ showInput, setShowInput ] = useState(false);
     const [ textValue, setTextValue ] = useState("");
     const navigate = useNavigate();
+    const { navigator } = useContext(UNSAFE_NavigationContext);
     
+    useEffect(() => {
+        const path = navigator.location.pathname;
+        if (path === "/") {
+            return setSelectedTab(false);
+        } else if (path === "/990-finder") {
+            return setSelectedTab(0);
+        } else if (path === "/about") {
+            return setSelectedTab(1);
+        };
+        console.log(navigator.location.pathname)
+    }, []);
+
     const handleTabChange = (event, newValue) => {
-        return setSelectedTab(newValue);
+        const path = navigator.location.pathname;
+        if (path === "/") {
+            return setSelectedTab(false);
+        } else if (path === "/990-finder") {
+            return setSelectedTab(0);
+        } else if (path === "/about") {
+            return setSelectedTab(1);
+        };
+        // return setSelectedTab(newValue);
     };
 
     const handleShowInput = () => {
@@ -101,17 +122,35 @@ const Banner = () => {
             <StyledContainer maxWidth="lg">
                 <StyledGrid container>
                     <StyledGridItem item xs={2}>
-                        <CandidImage src={candidImage} onClick={() => navigate({ pathname: "/" })} />
+                        <CandidImage
+                            src={candidImage}
+                            onClick={() => {
+                                navigate({ pathname: "/" })
+                                handleTabChange();
+                            }} 
+                        />
                     </StyledGridItem>
                     <StyledGridItem item xs={3}>
                         <Box sx={{ borderColor: "divider" }}>
                             <Tabs
                                 value={selectedTab}
-                                onChange={handleTabChange}
+                                // onChange={handleTabChange}
                                 textColor="inherit"
                             >
-                                <Tab label="Things you can do" onClick={() => navigate({ pathname: "/990-finder" })} />
-                                <Tab label="About us" onClick={() => navigate({ pathname: "/about" })} />
+                                <Tab
+                                    label="Things you can do"
+                                    onClick={() => {
+                                        navigate({ pathname: "/990-finder" })
+                                        handleTabChange();
+                                    }}
+                                />
+                                <Tab
+                                    label="About us"
+                                    onClick={() => {
+                                        navigate({ pathname: "/about" })
+                                        handleTabChange();    
+                                    }} 
+                                />
                             </Tabs>
                         </Box>
                     </StyledGridItem>
