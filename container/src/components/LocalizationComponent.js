@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from 'localization/LocalizationComponent';
+import { mount } from "localization/LocalizationComponent";
 import RemoteAppWrapper from "../hoc/RemoteAppWrapper";
 
 const LocalizationComponent = () => {

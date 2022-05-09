@@ -30,7 +30,7 @@
 // };
 
 import React from "react";
-import { mount } from 'input/InputComponent';
+import { mount } from "input/InputComponent";
 import RemoteAppWrapper from "../hoc/RemoteAppWrapper";
 
 const InputComponent = () => {
