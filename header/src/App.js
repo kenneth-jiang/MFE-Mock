@@ -11,7 +11,7 @@ const App = ({ history }) => {
             <Router navigator={history} location={history.location}>
                 <React.Fragment>
                     <NavBar />
-                    <br />
+                    {/* <br /> */}
                     <Banner />
                     {/* <br />
                     <h1>21312</h1>

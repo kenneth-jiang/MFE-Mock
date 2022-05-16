@@ -3,7 +3,6 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common.js");
 const packageJson = require("../package.json");
 const domain = process.env.PRODUCTION_DOMAIN;
-const localizationDomain = process.env.LOCALIZATION_PRODUCTION_DOMAIN;
 
 const prodConfig = {
     mode: "production",
@@ -18,7 +17,9 @@ const prodConfig = {
                 header: "header@" + domain + "/header/latest/remoteEntry.js", // nested folder inside domain
                 input: "input@" + domain + "/input/latest/remoteEntry.js",
                 about: "about@" + domain + "/about/latest/remoteEntry.js",
-                // localization: "localization@" + localizationDomain + "/localization/latest/remoteEntry.js",
+                missionvisionvalues: "missionvisionvalues@" + domain + "/missionvisionvalues/latest/remoteEntry.js",
+                chat: "chat@" + domain + "/chat/latest/remoteEntry.js",
+                subchat: "subchat@" + domain + "/subchat/latest/remoteEntry.js",
             },
             shared: packageJson.dependencies,
         })

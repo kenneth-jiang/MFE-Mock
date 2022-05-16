@@ -3,13 +3,14 @@ import { Router, Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container";
 import { styled } from "@mui/material";
 
-import Banner from "./components/Banner";
-import Input from "./components/Input";
-import CustomRouter from "./CustomRouter";
+import SearchPage from "./pages/SearchPage";
+// import Banner from "./pages/components/Banner";
+// import Input from "./pages/components/Input";
+// import CustomRouter from "./CustomRouter";
 
 const StyledContainer = styled(Container)(() => ({
     borderLeft: "1px solid #febe10",
-    height: "80vh",
+    fontFamily: "Algebra Web,Georgia,serif",
 }));
 
 const App = ({ history }) => {
@@ -22,12 +23,10 @@ const App = ({ history }) => {
                 navigator={history} 
             >
                 <Routes>
-                    <Route path="/990-finder" element={
+                    <Route path="/search" element={
                         <StyledContainer>
-                            <div style={{ height: "100px" }} />
-                            <Banner />
-                            <br />
-                            <Input />
+                            <div style={{ height: "50px" }} />
+                            <SearchPage />
                         </StyledContainer>
                     } />
                 </Routes>

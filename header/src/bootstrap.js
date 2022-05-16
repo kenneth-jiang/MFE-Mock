@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "development") {
         const browserHistory = createBrowserHistory();
         const headerRoot = ReactDOMClient.createRoot(document.getElementById("header-root"));
         headerRoot.render(<App history={browserHistory} />);
-    }
+    };
 };
 
 export { mount };
