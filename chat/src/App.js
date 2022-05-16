@@ -5,7 +5,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import ChatInput from "./components/ChatInput";
 
-const SERVER = "54.196.216.225:4001";
+// const SERVER = "d13kgc8p2qbrvs.cloudfront.net"
+const SERVER = "localhost:4001"
 
 const App = () => {
     let socket = useRef();
@@ -48,7 +49,6 @@ const App = () => {
             let sessionId = localStorage.getItem("id");
             result.map((record) => {
                 let item = document.createElement("div");
-                // console.log(sessionId)
                 if (sessionId === record.id) {
                     item.setAttribute("style", "text-align: right; font-weight: bold; white-space: wrap; padding-bottom: 15px");
                 } else {

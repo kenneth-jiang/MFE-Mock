@@ -41,7 +41,8 @@
 			function googleTranslateElementInit() {
 				new google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: "en,es,zh-CN,ru,hi" }, "google_translate_element");
 			};
-			setcookie("googtrans", "/en/" + userLang, time() + 3600, "/");
+			// document.cookie("googtrans", "/en/" + userLang, time() + 3600, "/");
+			document.cookie = "googtrans=/en/" + userLang;
 			// (function () {
 			// 	if (!window.location.hash) {
 			// 		window.location = window.location + `#googtrans(en|${userLang})`;
