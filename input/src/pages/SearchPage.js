@@ -8,14 +8,10 @@ import { getNewsData } from "../api/candidApi";
 
 const SearchPage = () => {
     const [newsArticles, setNewsArticles] = useState(null);
-    // const { navigator } = useContext(UNSAFE_NavigationContext);
-    // let navigate = useNavigate();
 
-    // console.log(navigator)
     const handleSubmit = async (value) => {
         if (value !== "") {
             let response = await getNewsData(value);
-            console.log(response.data.data);
             setNewsArticles(response.data.data);
         };
     };

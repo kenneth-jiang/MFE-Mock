@@ -1,20 +1,3 @@
-// import React, { useEffect } from "react";
-// import { getEssentialsData, getGrantsData, getNewsData } from "../../api/candidApi";
-
-// const ResultsContent = () => {
-//     useEffect(() => {
-//         getNewsData("candid").then((res) => console.log(res))
-//     }, []);
-
-//     return (
-//         <div>
-//             Hello World
-//         </div>
-//     );
-// };
-
-// export default ResultsContent;
-
 import React, { useState, useEffect, useContext } from 'react';
 import { UNSAFE_NavigationContext } from "react-router-dom";
 import { getNewsData } from "../../api/candidApi";
@@ -26,21 +9,6 @@ import CardActions from '@mui/material/CardActions';
 import Divider from '@mui/material/Divider';
 
 export default ({ newsArticles }) => {
-    // const [ newsArticles, setNewsArticles ] = useState([]);
-    // const { navigator } = useContext(UNSAFE_NavigationContext);
-
-    // useEffect(() => {
-    //     const getAsyncNewsData = async () => {
-    //         console.log(navigator.location, "THIS IS SPARta")
-    //         if (navigator.location.search !== "") {
-    //             console.log("BOFJDKLSF", navigator.location.search)
-    //             let response = await getNewsData(navigator.location.search.split("?=")[0]);
-    //             console.log(response.data.data);
-    //             setNewsArticles(response.data.data);
-    //         };
-    //     };
-    //     getAsyncNewsData();
-    // }, [navigator.location]);
 
     const unixTimestampToTimeAgo = (date) => {
         let time = Date.parse(date) / 1000;

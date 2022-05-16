@@ -11,6 +11,7 @@ import SearchPage from "./pages/SearchPage";
 const StyledContainer = styled(Container)(() => ({
     borderLeft: "1px solid #febe10",
     fontFamily: "Algebra Web,Georgia,serif",
+    minHeight: "750px",
 }));
 
 const App = ({ history }) => {

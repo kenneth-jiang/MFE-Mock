@@ -81,7 +81,6 @@ const Banner = () => {
     }, []);
 
     const handleTabChange = (event, newValue) => {
-        console.log(navigator.location.pathname)
         const path = navigator.location.pathname;
         if (path === "/") {
             return setSelectedTab(false);
@@ -184,7 +183,7 @@ const Banner = () => {
                     </StyledGridItem>
                     <StyledGridItem item xs={4} style={{ justifyContent: "flex-end", paddingRight: "5px" }}>
                         {/* <RightAlignedStyledDiv> */}
-                        {hovered ?
+                        {/* {hovered ?
                             <Paper
                                 onMouseLeave={() => setHovered(false)} 
                                 style={{ display: "flex",float: "right", border: "0.5px solid #febe10" }}
@@ -206,7 +205,7 @@ const Banner = () => {
                             <IconButton style={{ color: "black" }} sx={{ p: '10px' }} aria-label="directions" onMouseEnter={() => setHovered(true)}>
                                 <SearchIcon />
                             </IconButton>                    
-                        }
+                        } */}
                     </StyledGridItem>
                 </StyledGrid>
             {/* </StyledContainer> */}

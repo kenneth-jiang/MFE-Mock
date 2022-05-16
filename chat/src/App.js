@@ -8,7 +8,6 @@ import ChatInput from "./components/ChatInput";
 const SERVER = "54.196.216.225:4001";
 
 const App = () => {
-    console.log(SERVER)
     let socket = useRef();
 
     const observable = new Observable("custom");
