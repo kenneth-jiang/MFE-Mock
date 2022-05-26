@@ -1,11 +1,11 @@
 import React from "react";
-import * as ReactDOMClient from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { createBrowserHistory, createMemoryHistory } from "history";
 
 import App from "./App";
 
 const mount = (ele, { onNavigate, initialPath }) => {
-    const memoryHistory = createMemoryHistory({ // I think the decision to use memoryHistory was for the container app to handle the url routing but for the remote app to still be internally aware of it
+    const memoryHistory = createMemoryHistory({ // the decision to use memoryHistory was for the container app to handle the url routing but for the remote app to still be internally aware of it
         initialEntries: [initialPath], // takes the initial path sent by the container to update the initial path state
     });
     
@@ -13,7 +13,7 @@ const mount = (ele, { onNavigate, initialPath }) => {
         memoryHistory.listen(onNavigate); // when the memory history navigates, fire that onNavigate callback
     };
 
-    const root = ReactDOMClient.createRoot(ele);
+    const root = createRoot(ele);
     root.render(<App history={memoryHistory} />);
 
     return {
@@ -29,7 +29,7 @@ const mount = (ele, { onNavigate, initialPath }) => {
 if (process.env.NODE_ENV === "development") {
     if (document.getElementById("header-root")) {
         const browserHistory = createBrowserHistory();
-        const headerRoot = ReactDOMClient.createRoot(document.getElementById("header-root"));
+        const headerRoot = createRoot(document.getElementById("_header-root"));
         headerRoot.render(<App history={browserHistory} />);
     };
 };

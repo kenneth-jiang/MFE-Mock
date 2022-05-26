@@ -28,9 +28,9 @@ const mount = (ele, { onNavigate, initialPath }) => {
 };
 
 if (process.env.NODE_ENV === "development") {
-    if (document.getElementById("chat-root")) {
+    if (document.getElementById("_chat-root")) {
         const browserHistory = createBrowserHistory();
-        const chatRoot = ReactDOMClient.createRoot(document.getElementById("chat-root"));
+        const chatRoot = ReactDOMClient.createRoot(document.getElementById("_chat-root"));
         chatRoot.render(<App history={browserHistory} />);
     }
 };

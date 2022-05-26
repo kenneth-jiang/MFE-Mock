@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { useNavigate, UNSAFE_NavigationContext } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material";
@@ -14,10 +14,8 @@ const StyledButton = styled(Button)(() => ({
 
 const AboutPage = () => {
     const { t } = useTranslation();
-    const navigate = useNavigate();
-    const { navigator } = useContext(UNSAFE_NavigationContext);
 
-    const [showTranscript, setShowTranscript] = useState(false);
+    const [ showTranscript, setShowTranscript ] = useState(false);
 
     return (
         <Container style={{ borderLeft: "1px solid #febe10", fontFamily: "Algebra Web,Georgia,serif" }}>
@@ -31,8 +29,8 @@ const AboutPage = () => {
             <iframe
                 width="844"
                 height="475"
-                src={constants.AboutYoutubeLink}>
-            </iframe>
+                src={constants.AboutYoutubeLink}
+            />
             <br />
             <br />
 
@@ -64,9 +62,11 @@ const AboutPage = () => {
             </div>
             <br />
 
-            <StyledButton onClick={() => navigate({ pathname: "/mission-vision-values" })}>
-                {t("buttonLink")}
-            </StyledButton>
+            <Link to="/mission-vision-values">
+                <StyledButton>
+                    {t("buttonLink")}
+                </StyledButton>
+            </Link>
             <br />
             <br />
         </Container>

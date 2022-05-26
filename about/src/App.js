@@ -1,8 +1,8 @@
 import React from "react";
 import { Router, Routes, Route } from "react-router-dom";
 
-import AboutPage from "./pages/AboutPage";
 import "./i18n";
+import AboutPage from "./pages/AboutPage";
 
 const App = ({ history }) => {
     return (
